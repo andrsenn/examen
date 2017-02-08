@@ -16,9 +16,8 @@
 	        }
 	 		return self::$instancia; 
 	    }
-            
-            
-            public function Mostrar(){	
+		
+		public function Mostrar(){	
 			try {				
 				$sql = "select *from cliente";
 				$query = $this->dbh->prepare($sql);
@@ -33,10 +32,7 @@
 				print "Error!: " . $e->getMessage();	
 			}				
 		}
-                
-                
-                
-                public function Guardar($dni,$nombre,$apellidos,$direccion,$telefono,$fecha,$correo){	
+		public function Guardar($dni,$nombre,$apellidos,$direccion,$telefono,$fecha,$correo){	
 			try {				
 				$sql = "insert into cliente(dni,nombre,apellidos,direccion,telefono,fechanacimiento,correo) values
 				('".$dni."','".$nombre."','".$apellidos."','".$direccion."','".$telefono."','".$fecha."','".$correo."')";
@@ -47,11 +43,7 @@
 				print "Error!: " . $e->getMessage();	
 			}				
 		}
-                
-                
-                
-                
-                public function TraerCliente($cliente){	
+		public function TraerCliente($cliente){	
 			try {				
 				$sql = "select *from cliente where id_cliente='".$cliente."'";
 				$query = $this->dbh->prepare($sql);
@@ -66,9 +58,7 @@
 				print "Error!: " . $e->getMessage();	
 			}		
 		}
-                
-                
-                public function Modificar($id,$dni,$nombre,$apellidos,$direccion,$telefono,$fecha,$correo){	
+		public function Modificar($id,$dni,$nombre,$apellidos,$direccion,$telefono,$fecha,$correo){	
 			try {				
 				$sql = "update cliente set dni='".$dni."',nombre='".$nombre."', apellidos='".$apellidos."', 
 				direccion='".$direccion."', telefono='".$telefono."',fechanacimiento='".$fecha."',
@@ -79,10 +69,7 @@
 				print "Error!: " . $e->getMessage();	
 			}				
 		}
-                
-                
-                
-                public function Eliminar($cliente){
+	    public function Eliminar($cliente){
 			try {				
 				$sql = "delete from cliente where id_cliente='".$cliente."'";
 				$query1 = $this->dbh->prepare($sql);
@@ -92,26 +79,9 @@
 			}				
 		}
 
-
-
-
-
-
 	    public function __clone(){
 	 		trigger_error('No Puede Clonar Este Objeto', E_USER_ERROR); 
 	    } 
-                
-                
-                
-                
-		
-		
-		
-		
-		
-	       
-
-	    
 	}
 	
 ?>
