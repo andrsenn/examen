@@ -12,7 +12,17 @@
             }
         }
      
-        
+        public static function conectando(){
+            if (!isset(self::$instancia)) {
+                $miclase = __CLASS__;
+                self::$instancia = new $miclase;
+            }
+            return self::$instancia;       
+        }
+
+        public function prepare($sql){
+            return $this->dbh->prepare($sql);
+        }
     }
 ?>
 
