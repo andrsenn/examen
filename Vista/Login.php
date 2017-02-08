@@ -1,5 +1,29 @@
 <html lang="es">
-    
+    <head>
+	<meta charset="utf-8" />
+	<title>Clases LP4 - FISI UNSM</title>
+        <style type="text/css">         
+            body{
+                background-color: #BDBDBD;
+                box-shadow: 100px 50px 200px 100px #E6E6E6 inset;
+            }
+            #contenedor{
+                width: 25%;
+                background-color: #F2F2F4;
+                border-radius: 10px;
+                margin: auto;
+            }
+            input{
+                padding: 4px;
+                border: none;
+                width: 100%;
+                border: 2px solid #a4a4a4; 
+            }
+            form{
+                padding: 20px;
+            }
+        </style>
+    </head>
  
     <body>
 	<div style="height:80px;"></div>
