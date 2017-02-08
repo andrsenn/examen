@@ -26,7 +26,8 @@ if(isset($_GET['Cliente'])){
 				}
 			}
 		}		
-	}else{
+	}
+        else{
 		$usuario = $nuevo->Mostrar(); 
 		require_once("../Vista/Cliente.php");
 	}
