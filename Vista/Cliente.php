@@ -18,19 +18,19 @@
 						<th><center> Accion </center></th>
 					</thead>
 					<tbody>
-						<?php foreach ($usuario as $value){ ?>
+						<?php foreach ($usuario as $value){?>
 							<tr>
 								<td> <center> <?php echo $value['id_cliente']?> </center></td>
 								<td> <center> <?php echo $value['dni']?> </center> </td>
 								<td> <center> <?php echo $value['nombre']?> </center></td>
-								<td> <center> <?php echo $value['apellidos']?> </center></td>
+								<td> <center> <?php echo $value['apellidos']?></center></td>
 								<td> <center> <?php echo $value['direccion']?> </center></td>
 								<td> <center> 
 									<a href="Cliente.php?Cliente=<?php echo $value['id_cliente'];?><?php echo '&'?>Accion=3">Modificar</a>
 									<a href="Cliente.php?Cliente=<?php echo $value['id_cliente'];?><?php echo '&'?>Accion=1">Eliminar</a>
 								</center></td>
 							</tr>
-						<?php } ?>
+						<?php }?>
 					</tbody>
 				</table>
 			</div>
