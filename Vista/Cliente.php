@@ -1,9 +1,29 @@
 <html>
+    <head>
+		<style type="text/css">
+		    body{
+	                background-color: #F2F2F2;
+	            }
+	            #contenedor{
+	                width: 35%;
+	                border-radius: 10px;
+	                margin: auto;
+	            }
+	            a{
+	            	text-decoration: none;
+	            	background: #81BEF7;
+	                padding: 4px;
+	                color: #fff;
+	            }
+	            th,td{
+	            	border: 2px solid #81BEF7;
+	            }
+		</style>
 		
-		</head>
+    </head>
 		<body> <br>
 			<div class="container" id="contenedor">
-				<center><h2>Bienvenido Usuario:<?php echo $_SESSION['usuario']; ?></h2></center>
+				<center><h2>Bienvenido Usuario:<?php echo $_SESSION['usuario'];?></h2></center>
 				<div>
 					<a href="Cliente.php?Cliente=1<?php echo '&'?>Accion=4">Nuevo Registro</a>
 					<a href="../index.php" role="button">Cerrar Session</a>
