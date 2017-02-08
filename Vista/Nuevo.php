@@ -1,6 +1,34 @@
 <html>
-		
-		<body> <br><br><br>
+    <head>
+        <style type="text/css">
+	    body{
+	        background-color: #BDBDBD;
+	        }
+	        #contenedor{
+	            width: 35%;
+	            background-color: #F2F2F2;
+	            border-radius: 10px;
+	            margin: auto;
+	            padding: 30px;
+	        }
+	</style>
+		<script type="text/javascript">
+                    function Letras(e){
+			tecla = e.keyCode || e.which; 
+			base =/[a-zñ ]/; 
+			teclado = String.fromCharCode(tecla).toLowerCase(); 
+			return base.test(teclado); 
+			}
+
+		    function Numeros(e){
+			tecla = e.keyCode || e.which; 
+			base =/[0-9]/; 
+			teclado = String.fromCharCode(tecla).toLowerCase(); 
+			return base.test(teclado); 
+			}
+                </script>
+    </head>
+	<body> <br><br><br>
 			<div class="container" id="contenedor">
 					<center><h3>Registro Nuevo Cliente</h3></center><br>
 				<?php $Action="../Controlador/Cliente.php?Cliente=1 & Accion=0"?>
@@ -55,5 +83,5 @@
 					</div>
 				</form>
 			</div>
-		</body>
-	</html>
+	</body>
+</html>
