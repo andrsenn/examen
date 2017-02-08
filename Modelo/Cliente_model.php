@@ -82,6 +82,28 @@
                 
                 
                 
+                public function Eliminar($cliente){
+			try {				
+				$sql = "delete from cliente where id_cliente='".$cliente."'";
+				$query1 = $this->dbh->prepare($sql);
+				$query1->execute(); $this->dbh = null;		
+			}catch(PDOException $e){
+				print "Error!: " . $e->getMessage();	
+			}				
+		}
+
+
+
+
+
+
+	    public function __clone(){
+	 		trigger_error('No Puede Clonar Este Objeto', E_USER_ERROR); 
+	    } 
+                
+                
+                
+                
 		
 		
 		
